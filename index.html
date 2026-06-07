@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web de repaso de JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <h1>Web de repaso de JavaScript</h1>
+        <p>Resumen sencillo para estudiar los conceptos básicos del examen.</p>
+
+        <nav class="menu">
+            <a href="#variables">Variables</a>
+            <a href="#operadores">Operadores</a>
+            <a href="#condicionales">Condicionales</a>
+            <a href="#bucles">Bucles</a>
+            <a href="#arrays">Arrays</a>
+            <a href="#funciones">Funciones</a>
+            <a href="#dom">DOM</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#math">Math</a>
+            <a href="#strings">Strings</a>
+            <a href="#fechas">Fechas</a>
+            <a href="#formularios">Formularios</a>
+            <a href="#errores">Errores</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="variables" class="apartado">
+            <h2>Variables y tipos</h2>
+            <p>Las variables sirven para guardar datos. En JavaScript podemos guardar textos, números, booleanos, arrays u objetos.</p>
+            <pre><code>let nombre = "Ana";
+let edad = 18;
+let aprobado = true;</code></pre>
+            <p>Este ejemplo guarda un texto, un número y un valor verdadero o falso.</p>
+        </section>
+
+        <section id="operadores" class="apartado">
+            <h2>Operadores</h2>
+            <p>Los operadores permiten hacer cálculos o comparar valores.</p>
+            <pre><code>let total = 10 + 5;
+let esMayor = total &gt; 12;</code></pre>
+            <p>Primero se suma 10 + 5 y después se comprueba si el resultado es mayor que 12.</p>
+        </section>
+
+        <section id="condicionales" class="apartado interactivo">
+            <h2>Condicionales</h2>
+            <p>Los condicionales permiten ejecutar un código u otro según una condición.</p>
+            <pre><code>if (edad &gt;= 18) {
+    console.log("Mayor de edad");
+} else {
+    console.log("Menor de edad");
+}</code></pre>
+            <p>El código comprueba si la edad es mayor o igual que 18.</p>
+
+            <div class="demo">
+                <label for="edad">Prueba una edad</label>
+                <input type="number" id="edad" placeholder="Escribe una edad">
+                <button id="btn-edad" type="button">Comprobar</button>
+                <p id="resultado-edad" class="resultado"></p>
+            </div>
+        </section>
+
+        <section id="bucles" class="apartado">
+            <h2>Bucles</h2>
+            <p>Los bucles repiten instrucciones varias veces sin tener que escribir el mismo código muchas veces.</p>
+            <pre><code>for (let i = 1; i &lt;= 3; i++) {
+    console.log(i);
+}</code></pre>
+            <p>Este bucle muestra los números del 1 al 3.</p>
+        </section>
+
+        <section id="arrays" class="apartado interactivo">
+            <h2>Arrays</h2>
+            <p>Un array es una lista de datos guardados en una sola variable.</p>
+            <pre><code>let frutas = ["manzana", "pera", "plátano"];
+frutas.push("uva");</code></pre>
+            <p>El ejemplo crea una lista de frutas y añade una fruta nueva al final.</p>
+
+            <div class="demo">
+                <label for="fruta">Añadir fruta</label>
+                <input type="text" id="fruta" placeholder="Ejemplo: naranja">
+                <button id="btn-fruta" type="button">Añadir</button>
+                <ul id="lista-frutas"></ul>
+            </div>
+        </section>
+
+        <section id="funciones" class="apartado">
+            <h2>Funciones</h2>
+            <p>Las funciones agrupan instrucciones para poder reutilizarlas cuando las necesitemos.</p>
+            <pre><code>function saludar(nombre) {
+    return "Hola, " + nombre;
+}</code></pre>
+            <p>Esta función recibe un nombre y devuelve un saludo personalizado.</p>
+        </section>
+
+        <section id="dom" class="apartado">
+            <h2>DOM</h2>
+            <p>El DOM permite acceder y cambiar elementos de una página web usando JavaScript.</p>
+            <pre><code>const titulo = document.querySelector("h1");
+titulo.textContent = "Nuevo título";</code></pre>
+            <p>El código selecciona el primer h1 y cambia su texto.</p>
+        </section>
+
+        <section id="eventos" class="apartado interactivo">
+            <h2>Eventos</h2>
+            <p>Los eventos permiten reaccionar a acciones del usuario, como hacer clic en un botón.</p>
+            <pre><code>boton.addEventListener("click", function () {
+    alert("Has hecho clic");
+});</code></pre>
+            <p>El ejemplo ejecuta una acción cuando el usuario pulsa un botón.</p>
+
+            <div class="demo">
+                <button id="btn-contador" type="button">Haz clic</button>
+                <p id="resultado-contador" class="resultado">Clics: 0</p>
+            </div>
+        </section>
+
+        <section id="math" class="apartado">
+            <h2>Math</h2>
+            <p>Math es un objeto de JavaScript que permite hacer operaciones matemáticas útiles.</p>
+            <pre><code>let numero = Math.round(4.6);
+let aleatorio = Math.floor(Math.random() * 10);</code></pre>
+            <p>El primer ejemplo redondea un número y el segundo genera un número aleatorio.</p>
+        </section>
+
+        <section id="strings" class="apartado">
+            <h2>Strings</h2>
+            <p>Los strings son cadenas de texto. Se pueden modificar, medir o buscar partes dentro de ellos.</p>
+            <pre><code>let texto = "JavaScript";
+console.log(texto.length);
+console.log(texto.toUpperCase());</code></pre>
+            <p>El código muestra la longitud del texto y lo convierte a mayúsculas.</p>
+        </section>
+
+        <section id="fechas" class="apartado">
+            <h2>Fechas</h2>
+            <p>El objeto Date sirve para trabajar con fechas y horas.</p>
+            <pre><code>let hoy = new Date();
+console.log(hoy.getFullYear());</code></pre>
+            <p>Este ejemplo crea la fecha actual y obtiene el año.</p>
+        </section>
+
+        <section id="formularios" class="apartado">
+            <h2>Formularios</h2>
+            <p>JavaScript permite comprobar datos de formularios antes de enviarlos.</p>
+            <pre><code>formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+});</code></pre>
+            <p>El código evita que el formulario se envíe automáticamente para poder validarlo antes.</p>
+        </section>
+
+        <section id="errores" class="apartado">
+            <h2>Errores típicos</h2>
+            <p>Algunos errores comunes son escribir mal nombres de variables, olvidar paréntesis o usar mal los selectores del DOM.</p>
+            <pre><code>let nombre = "Ana";
+console.log(nom); // Error: la variable correcta es nombre</code></pre>
+            <p>El error ocurre porque se intenta usar una variable llamada nom, pero la variable creada se llama nombre.</p>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>RA7 - Práctica final de repaso de JavaScript</p>
+    </footer>
+
+</body>
+</html>
